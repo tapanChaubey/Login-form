@@ -1,6 +1,8 @@
+require("dotenv").config();
 const express=require("express");
 const fs=require("fs");
 const app=express();
+const port=3000;
 app.use(express.static("."));
 app.use(express.urlencoded());
 
@@ -21,6 +23,6 @@ app.post("/getdata",(req,res)=>{
     })
     
 })
-app.listen(3000,(err)=>{
+app.listen(port,(err)=>{
     console.log("sever strated !");
 })
